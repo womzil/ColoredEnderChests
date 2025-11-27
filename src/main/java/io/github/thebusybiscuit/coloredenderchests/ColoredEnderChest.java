@@ -21,7 +21,6 @@ import io.github.thebusybiscuit.slimefun4.utils.ColoredMaterial;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
-import org.jetbrains.annotations.NotNull;
 
 public class ColoredEnderChest extends SlimefunItem {
 
@@ -118,7 +117,7 @@ public class ColoredEnderChest extends SlimefunItem {
         return new SimpleBlockBreakHandler() {
 
             @Override
-            public void onBlockBreak(@NotNull Block b) {
+            public void onBlockBreak(Block b) {
                 ColorIndicator.removeIndicator(b);
             }
         };
@@ -128,7 +127,7 @@ public class ColoredEnderChest extends SlimefunItem {
         return new BlockPlaceHandler(false) {
 
             @Override
-            public void onPlayerPlace(@NotNull BlockPlaceEvent e) {
+            public void onPlayerPlace(BlockPlaceEvent e) {
                 int yaw = 0;
 
                 EnderChest chest = (EnderChest) e.getBlock().getBlockData();
