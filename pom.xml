@@ -105,12 +105,6 @@
             <artifactId>Slimefun4</artifactId>
             <version>e7fa63b</version>
             <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.github.baked-libs</groupId>
-                    <artifactId>dough-api</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>

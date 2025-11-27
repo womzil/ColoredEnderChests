@@ -14,6 +14,7 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import org.jetbrains.annotations.NotNull;
 
 public class ColoredEnderChests extends JavaPlugin implements SlimefunAddon {
 
@@ -56,7 +57,7 @@ public class ColoredEnderChests extends JavaPlugin implements SlimefunAddon {
         colors.put(14, "&4Red");
         colors.put(15, "&8Black");
 
-        itemGroup = new ItemGroup(new NamespacedKey(this, "colored_enderchests"), new CustomItemStack(Material.ENDER_CHEST, "&5Colored Ender Chests"), 2);
+        itemGroup = new ItemGroup(new NamespacedKey(this, "colored_enderchests"), CustomItemStack.create(Material.ENDER_CHEST, "&5Colored Ender Chests"), 2);
 
         for (int c1 = 0; c1 < 16; c1++) {
             for (int c2 = 0; c2 < 16; c2++) {

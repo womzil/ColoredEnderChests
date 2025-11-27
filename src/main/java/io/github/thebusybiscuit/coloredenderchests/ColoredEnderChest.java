@@ -21,24 +21,42 @@ import io.github.thebusybiscuit.slimefun4.utils.ColoredMaterial;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
+import org.jetbrains.annotations.NotNull;
 
 public class ColoredEnderChest extends SlimefunItem {
 
     public ColoredEnderChest(ColoredEnderChests plugin, int size, int c1, int c2, int c3) {
-        // @formatter:off
-        super(plugin.itemGroup, new SlimefunItemStack("COLORED_ENDER_CHEST_" + (size == 27 ? "SMALL" : "BIG") + "_" + c1 + "_" + c2 + "_" + c3, Material.ENDER_CHEST, "&eColored Ender Chest &7(" + (size == 27 ? "Small" : "Big") + ")", "", "&7Size: &e" + size, "", "&7- " + plugin.colors.get(c1), "&7- " + plugin.colors.get(c2), "&7- "
-                + plugin.colors.get(c3)), RecipeType.ANCIENT_ALTAR,
-                (size == 27) ? new ItemStack[] { 
-                        new ItemStack(ColoredMaterial.WOOL.get(c1)), new ItemStack(ColoredMaterial.WOOL.get(c2)), new ItemStack(ColoredMaterial.WOOL.get(c3)), 
-                        new ItemStack(Material.OBSIDIAN), new ItemStack(Material.CHEST), new ItemStack(Material.OBSIDIAN), 
-                        SlimefunItems.ENDER_RUNE, new ItemStack(Material.OBSIDIAN), SlimefunItems.ENDER_RUNE } 
-                : new ItemStack[] { 
-                        new ItemStack(ColoredMaterial.WOOL.get(c1)), new ItemStack(ColoredMaterial.WOOL.get(c2)), new ItemStack(ColoredMaterial.WOOL.get(c3)), 
-                        SlimefunItems.WITHER_PROOF_OBSIDIAN, getSmallerEnderChest(c1, c2, c3), SlimefunItems.WITHER_PROOF_OBSIDIAN, 
-                        SlimefunItems.ENDER_RUNE, SlimefunItems.GOLD_24K, SlimefunItems.ENDER_RUNE 
+        super(
+                plugin.itemGroup,
+                new SlimefunItemStack(
+                        "COLORED_ENDER_CHEST_" + (size == 27 ? "SMALL" : "BIG") + "_" + c1 + "_" + c2 + "_" + c3,
+                        Material.ENDER_CHEST, "&eColored Ender Chest &7(" + (size == 27 ? "Small" : "Big") + ")", "",
+                        "&7Size: &e" + size, "", "&7- " + plugin.colors.get(c1),
+                        "&7- " + plugin.colors.get(c2), "&7- " + plugin.colors.get(c3)),
+                RecipeType.ANCIENT_ALTAR,
+                (size == 27) ? new ItemStack[] {
+                        new ItemStack(ColoredMaterial.WOOL.get(c1)),
+                        new ItemStack(ColoredMaterial.WOOL.get(c2)),
+                        new ItemStack(ColoredMaterial.WOOL.get(c3)),
+                        new ItemStack(Material.OBSIDIAN),
+                        new ItemStack(Material.CHEST),
+                        new ItemStack(Material.OBSIDIAN),
+                        SlimefunItems.ENDER_RUNE.asOne(),
+                        new ItemStack(Material.OBSIDIAN),
+                        SlimefunItems.ENDER_RUNE.asOne()
+                }
+                : new ItemStack[] {
+                        new ItemStack(ColoredMaterial.WOOL.get(c1)),
+                        new ItemStack(ColoredMaterial.WOOL.get(c2)),
+                        new ItemStack(ColoredMaterial.WOOL.get(c3)),
+                        SlimefunItems.WITHER_PROOF_OBSIDIAN.asOne(),
+                        getSmallerEnderChest(c1, c2, c3),
+                        SlimefunItems.WITHER_PROOF_OBSIDIAN.asOne(),
+                        SlimefunItems.ENDER_RUNE.asOne(),
+                        SlimefunItems.GOLD_24K.asOne(),
+                        SlimefunItems.ENDER_RUNE.asOne()
                 }
         );
-        // @formatter:on
 
         int[] slots = IntStream.range(0, size).toArray();
 
@@ -100,7 +118,7 @@ public class ColoredEnderChest extends SlimefunItem {
         return new SimpleBlockBreakHandler() {
 
             @Override
-            public void onBlockBreak(Block b) {
+            public void onBlockBreak(@NotNull Block b) {
                 ColorIndicator.removeIndicator(b);
             }
         };
@@ -110,7 +128,7 @@ public class ColoredEnderChest extends SlimefunItem {
         return new BlockPlaceHandler(false) {
 
             @Override
-            public void onPlayerPlace(BlockPlaceEvent e) {
+            public void onPlayerPlace(@NotNull BlockPlaceEvent e) {
                 int yaw = 0;
 
                 EnderChest chest = (EnderChest) e.getBlock().getBlockData();
