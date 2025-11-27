@@ -4,10 +4,15 @@ You need to install Slimefun4 in order for this plugin to work.
 
 ColoredEnderChests is a Slimefun4 Addon that is heavily inspired by the famous mod [Ender Storage](https://www.curseforge.com/minecraft/mc-mods/ender-storage).
 It adds a total of 8192 new items to Slimefun4.
-You can create global Ender Chests out of any combination of three dyes. These Ender Chests will share the same inventory per-color.
+You can create global Ender Chests out of any combination of three dyes.
+These Ender Chests will share the same inventory per-color.
 They even work with Cargo nodes and are shared across all Players.
 
 ## Download
+For now no compiled builds for 1.21.X are available.
+You will have to compile them yourself against Slimefun builds from [SF-Lab](https://github.com/SlimeFun-Lab/Slimefun4).
+These builds are **NOT** compatible with Spigot!
+
 You can download old builds for versions **below** 1.21 right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ColoredEnderChests/master/)
 
 <p align="center">
