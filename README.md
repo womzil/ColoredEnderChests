@@ -7,8 +7,8 @@ It adds a total of 8192 new items to Slimefun4.
 You can create global Ender Chests out of any combination of three dyes. These Ender Chests will share the same inventory per-color.
 They even work with Cargo nodes and are shared across all Players.
 
-## Download ColoredEnderChests
-You can download ColoredEnderChests right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ColoredEnderChests/master/)
+## Download
+You can download old builds for versions **below** 1.21 right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ColoredEnderChests/master/)
 
 <p align="center">
   <a href="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ColoredEnderChests/master/">
