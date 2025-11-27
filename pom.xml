@@ -101,9 +101,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.Slimefun-Lab</groupId>
-            <artifactId>Slimefun4</artifactId>
-            <version>e7fa63b</version>
+            <groupId>com.github.slimefun</groupId>
+            <artifactId>Slimefun</artifactId>
+            <version>4.10-UNOFFICIAL</version>
             <scope>provided</scope>
         </dependency>
 
