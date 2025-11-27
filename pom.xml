@@ -8,19 +8,16 @@
     <version>UNOFFICIAL</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <repositories>
         <repository>
+            <!-- PaperLib -->
             <id>paper-repo</id>
-            <url>https://repo.destroystokyo.com/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
@@ -95,17 +92,18 @@
     </build>
 
     <dependencies>
+        <!-- Paper -->
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.10-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.github.thebusybiscuit</groupId>
+            <groupId>com.github.Slimefun-Lab</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-27</version>
+            <version>e7fa63b</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
